@@ -1,0 +1,27 @@
+{
+  "name": "employee-_tracker",
+  "version": "1.0.0",
+  "description": "Employee Tracker Command Line Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js --save",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamRomano89/employee-_tracker.git"
+  },
+  "author": "Adam Romano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamRomano89/employee-_tracker/issues"
+  },
+  "homepage": "https://github.com/AdamRomano89/employee-_tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.2"
+  },
+  "devDependencies": {}
+}
