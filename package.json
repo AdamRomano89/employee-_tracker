@@ -2,10 +2,9 @@
   "name": "employee-_tracker",
   "version": "1.0.0",
   "description": "Employee Tracker Command Line Application",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js --save",
-    "dev": "nodemon index.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   "dependencies": {
     "console.table": "^0.10.0",
     "dotenv": "^10.0.0",
+    "figlet": "^1.5.2",
     "inquirer": "^8.2.0",
     "mysql2": "^2.3.2"
   },
