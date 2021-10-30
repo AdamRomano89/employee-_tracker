@@ -1,7 +1,6 @@
 const db = require('../db/connection')()
 const cTable = require('console.table')
-const inquirer = require('inquirer')
-
+const MAINMENU = require('./index')
 
 // Get All Departments
 exports.getDepartments = () => {
@@ -13,31 +12,8 @@ exports.getDepartments = () => {
   db.query(sql, (err, data) => {
     if (err) console.log(err.message);
     console.log(cTable.getTable(data));
-    db.end();
+    MAINMENU.mainMenu();
   })
-}
-
-//Add a department
-exports.addDepartment = () => {
-
-  // Get The User Inputes
-  inquirer.prompt([{
-    type: 'input',
-    name: 'userInput',
-    message: 'What the name of the department?'
-  }]).then(answers => {
-    if(answers.userInput === 0 || answers.userInput === "") {
-      console.log("Please enter a valid department name!");
-      return this.addDepartment();
-    }
-    const sql = `INSERT INTO department (department_name) VALUES (?)`
-    db.query(sql, [answers.userInput], (err, data) => {
-      if (err) console.log(err.message);
-      // initiate response table
-      console.log(cTable.getTable(`You have added ${data.affectedRows} department`));
-      db.end();
-    })
-  });
 }
 
 exports.viewAllRoles = () => {
@@ -49,7 +25,7 @@ exports.viewAllRoles = () => {
     if (err) throw err
     //Log data
     console.log(cTable.getTable(data));
-    db.end();
+    MAINMENU.mainMenu();
   })
 }
 
@@ -63,6 +39,6 @@ exports.viewAllEmployees = () => {
     //Return data
     console.log(cTable.getTable(data));
     //End connection
-    db.end();
+    MAINMENU.mainMenu();
   })
 }
