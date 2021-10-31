@@ -14,12 +14,12 @@ exports.addDepartment = () => {
     message: 'What the name of the department?'
   }]).then(answers => {
     if(answers.userInput === 0 || answers.userInput === "") {
-      console.log("Please enter a valid department name!");
+      console.table("Please enter a valid department name!");
       return this.addDepartment();
     }
     const sql = `INSERT INTO department (department_name) VALUES (?)`
     db.query(sql, [answers.userInput], (err, data) => {
-      if (err) console.log(err.message);
+      if (err) console.table(err.message);
       // initiate response table
       console.log(cTable.getTable(`You have added ${data.affectedRows} department`));
       MAINMENU.mainMenu();
@@ -57,13 +57,13 @@ exports.addEmployee = () => {
   //Validation
   if(response.first_name === 0 || response.last_name === 0 || response.role_id === 0 || response.manager_id === 0 || 
     response.first_name === "" || response.last_name === "" || response.role_id === "" || response.manager_id === ""){
-    console.log(`You must enter a valid values`)
+    console.table(`You must enter a valid values! Please try again.`)
     return this.addEmployee()
   }
   //Send sql query
   db.query(sql, [response.first_name, response.last_name, response.role_id, response.manager_id], (err, data) => {
     if(err) throw err
-    console.log(cTable.getTable(`You have added ${data.affectedRows} employee`));
+    console.table(`You have added ${data.affectedRows} employee`);
     MAINMENU.mainMenu();
   })
 })
@@ -85,13 +85,13 @@ exports.updateRole  = () => {
 ]).then(answers => {
   const sql = `UPDATE employee SET role_id = ? WHERE id = ?`
   if (answers.new_role_id === 0 || answers.new_role_id === "" || answers.employee_id === 0 || answers.employee_id ==="") {
-    console.log(`You must enter a valid input`);
+    console.table(`You must enter a valid input`);
     return this.updateRole()
   }
   //Send query statement
   db.query(sql,[answers.new_role_id, answers.employee_id],(err, data) => {
     if (err) throw err
-    console.log(cTable.getTable(`You have ${data.affectedRows} employee role`));
+    console.table(`You have updated ${data.affectedRows} employee role`);
     MAINMENU.mainMenu();
   })
 })

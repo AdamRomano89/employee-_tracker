@@ -36,18 +36,18 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-  ("Rinah Russo", "Rylee Powell",6,4),
-  ("Quinn Parker", "Leila Tyson",6,1),
-  ("Vernon Summers", "Elvis Levy",10,2),
-  ("Julian Lambert", "Dominique Hill",8,3),
-  ("Hamilton Lucas", "Nicholas Hudson",12,3),
-  ("Jemima Pierce", "Hilel Bray",3,2),
-  ("Kenneth Stevenson", "Kennedy Macdonald",3,1),
-  ("Ulysses Hunt", "Perry Haley",2,2),
-  ("Forrest Parsons", "Veronica Byers",8,5),
-  ("Aline Mcneil", "Stacey Beach",4,3),
-  ("Hedley Blair", "Christian Simpson",8,2),
-  ("Paula Anthony", "Maya Barnett",5,5),
-  ("Brian Berry", "Madonna Reid",3,3),
-  ("Caryn Moran", "Aristotle Sharpe",9,2),
-  ("Rigel Stevenson", "Carlos Sparks",4,1);
+  ("Rinah", "Rylee",6,4),
+  ("Quinn", "Leila",6,1),
+  ("Vernon", "Elvis",10,2),
+  ("Julian", "Dominique",8,3),
+  ("Hamilton", "Nicholas",12,3),
+  ("Jemima", "Hilel",3,2),
+  ("Kenneth", "Kennedy",3,1),
+  ("Ulysses", "Perry",2,2),
+  ("Forrest", "Veronica",8,5),
+  ("Aline", "Stacey",4,3),
+  ("Hedley", "Christian",8,2),
+  ("Paula", "Maya",5,5),
+  ("Brian", "Madonna",3,3),
+  ("Caryn", "Aristotle",9,2),
+  ("Rigel", "Carlos",4,1);
