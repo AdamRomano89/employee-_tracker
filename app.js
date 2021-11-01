@@ -2,6 +2,7 @@ require('dotenv').config();
 const {startApp} = require('./controllers');
 const figlet = require('figlet');
 
+
 //Simple welcome message!
 welcomeMessage = () => {
   console.log("Welcome to");

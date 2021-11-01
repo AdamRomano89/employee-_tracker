@@ -1,53 +1,65 @@
-INSERT INTO department (department_name)
-VALUES
+INSERT INTO department (department_name) 
+VALUES 
+("Engineering"),
+("Product"),
+("Operations"),
+("Sales"),
+("Customer Service"),
+("Marketing"),
+("Editorial"),
+("Creative");
 
-  ("Engineering"),
-  ("Produect"),
-  ("Sales"),
-  ("Operations"),
-  ("Community"),
-  ("Marketing"),
-  ("Planning");
-
-INSERT INTO roles (title, salary, department_id)
-VALUES
+-- -----------------------------------------------------
+-- Table `role` Seed Data
+-- -----------------------------------------------------
+INSERT INTO roles (title, salary, department_id) 
+VALUES 
 -- Engineering 
 -- -----------------------------------------------------
 ("Sr. Engineer", 200000.00, 1),
 ("Engineer I", 222222.00, 1),
 ("Engineer II", 233333.00, 1),
--- Product
+-- Customer Service
 -- -----------------------------------------------------
 ("Customer Service Associate", 222222.00, 2),
 -- Sales
 -- -----------------------------------------------------
 ("Head of Sales", 233333.00, 3),
 ("Sales Associate", 233333.00, 3),
+-- Product
+-- -----------------------------------------------------
+("VP of Product", 300222.00, 4),
+("Product Manager", 300222.00, 4),
 -- Operations
 -- -----------------------------------------------------
-("VP of Operations", 300222.00, 4),
-("Operations Manager", 300222.00, 4),
--- Community
--- -----------------------------------------------------
-("Head of Commnunity Finance", 165000.00, 5),
+("Head of Finance", 165000.00, 5),
 ("Head of Data", 160000.00, 5),
 ("CEO", 500000.00, 5),
-("Executive Assistant", 500000.00, 5);
+("Executive Assistant", 50000.00, 5);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES
-  ("Rinah", "Rylee",6,4),
-  ("Quinn", "Leila",6,1),
-  ("Vernon", "Elvis",10,2),
-  ("Julian", "Dominique",8,3),
-  ("Hamilton", "Nicholas",12,3),
-  ("Jemima", "Hilel",3,2),
-  ("Kenneth", "Kennedy",3,1),
-  ("Ulysses", "Perry",2,2),
-  ("Forrest", "Veronica",8,5),
-  ("Aline", "Stacey",4,3),
-  ("Hedley", "Christian",8,2),
-  ("Paula", "Maya",5,5),
-  ("Brian", "Madonna",3,3),
-  ("Caryn", "Aristotle",9,2),
-  ("Rigel", "Carlos",4,1);
+-- -----------------------------------------------------
+-- Table `employee` Seed Data
+-- -----------------------------------------------------
+INSERT INTO employee (first_name, last_name, role_id, manager_id) 
+VALUES 
+-- Employees
+-- -----------------------------------------------------
+("Matt", "Hanner", 1, 6),
+("Derek", "Cool", 2, 5),
+("Megan", "Milli", 3, 2),
+("Anna", "Zanzy", 4, 8),
+("Jenny", "Banner", 4, 8),
+("Sarah", "Donner", 4, 1),
+("Larry", "Hax", 6, 12),
+("Anne", "Cow", 7, 12),
+("Barry", "Moon", 7, 10),
+("Justin", "Zoo", 4, 10),
+("Matthew", "Bae", 4, 11),
+("Meigan", "Dee", 12, 11),
+-- Executive Team 
+-- -----------------------------------------------------
+("Patrick", "Keene", 11, NULL),
+("Chad", "Millman", 10, NULL),
+("Ari", "Zan", 12, NULL),
+("Melissa", "Boon", 8, NULL),
+("Kristen", "Danner", 8, NULL);
