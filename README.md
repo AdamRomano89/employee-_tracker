@@ -25,7 +25,7 @@ A database was created allowing company users to view and modify information abo
 <img width="1156" alt="Screenshot" src="images/Screen Shot 2021-10-31 at 10.00.26 AM.png">
 
 
-#### Video [Here](https://www.youtube.com/watch?v=WSNENZAp2tg)
+#### Video [Here](https://www.youtube.com/watch?v=8GfqjHWYA0Q)
    
 #### User Story 📖
 
