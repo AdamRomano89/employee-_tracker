@@ -24,7 +24,7 @@ exports.viewAllRoles = () => {
   roles.title AS 'Job Title',
   roles.salary AS 'Salary',
   department.department_name AS 'Department'
-  FROM roles INNER JOIN department on roles.department_id=department.id;`
+  FROM roles INNER JOIN department on roles.department_id=department.id;` 
 
   db.query(sql, (err, data) => {
     //Handle errors
